@@ -23,3 +23,10 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+
+production:
+  <<: *default
+  adapter: postgresql
+  database: hw4spring2023_production
+  username: hw4spring2023
+  password: <%= ENV["hw4spring2023_DATABASE_PASSWORD"] %>
